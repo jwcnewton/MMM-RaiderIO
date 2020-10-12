@@ -27,7 +27,7 @@
 .mmm-rio-wrapper-text-wrapper-text {
     font-size: .95rem;
     display: block;
-    color: rgba(0, 0, 0, .7);
+    color: white;
 }
 
 .mmm-rio-wrapper-score {
@@ -38,4 +38,18 @@
 
 .mmm-rio-complete {
     color: rgba(57, 255, 20);
+}
+
+.mmm-rio-wrapper-text-wrapper-text-underline {
+    text-decoration-line:underline;
+}
+
+.mmm-rio-compact {
+    text-align: left;
+    width: 10rem;
+    padding-left: 2px;
+}
+
+.mmm-rio-compact-text {
+    max-width: 25%;
 }
