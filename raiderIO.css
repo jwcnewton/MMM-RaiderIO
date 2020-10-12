@@ -22,6 +22,8 @@
     flex: 1 1 auto;
     min-width: 0;
     min-height: 0;
+    text-align: left;
+    max-width: 9rem;
 }
 
 .mmm-rio-wrapper-text-wrapper-text {
@@ -41,11 +43,11 @@
 }
 
 .mmm-rio-wrapper-text-wrapper-text-underline {
+    inline-size: max-content;
     text-decoration-line:underline;
 }
 
 .mmm-rio-compact {
-    text-align: left;
     width: 10rem;
     padding-left: 2px;
 }
