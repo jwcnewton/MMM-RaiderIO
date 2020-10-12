@@ -32,6 +32,8 @@ Compact mode
 
 <img src="./images/compact-mode.png">
 
+Full screen mode
+
 ```json
 {
     module: "MMM-RaiderIO",
