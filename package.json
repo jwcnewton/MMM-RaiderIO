@@ -1,0 +1,19 @@
+{
+  "name": "mmm-raiderio",
+  "version": "1.0.0",
+  "description": "Magic Mirror - Raider IO module",
+  "main": "MMM-RaiderIO.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwcnewton/MMM-RaiderIO.git"
+  },
+  "author": "jwcnewton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwcnewton/MMM-RaiderIO/issues"
+  },
+  "homepage": "https://github.com/jwcnewton/MMM-RaiderIO#readme",
+  "dependencies": {
+    "jimp": "^0.16.1"
+  }
+}

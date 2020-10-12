@@ -6,7 +6,7 @@ Module.register("MMM-RaiderIO", {
     // Default module config.
     defaults: {
         data: {},
-        
+
         apiBase: "https://raider.io/api/v1/characters/profile",
         iconUni: {
             "U+02197": "better",
@@ -140,6 +140,15 @@ Module.register("MMM-RaiderIO", {
         return wrapper;
     },
 
+    socketNotificationReceived: function (notification, result) {
+        if (notification === "CREATED") {
+            this.data = result;
+            this.loaded = true;
+            this.show(this.config.animationSpeed, { lockString: this.identifier });
+            this.updateDom(this.config.animationSpeed);
+        }
+    },
+
     updateScore: function () {
         var self = this;
         var retry = true;
@@ -155,7 +164,7 @@ Module.register("MMM-RaiderIO", {
             self.processResponse(values);
         }, (err) => {
             retry = false;
-            
+
             if (err === 401) {
                 self.updateDom(self.config.animationSpeed);
                 retry = true;
@@ -192,10 +201,7 @@ Module.register("MMM-RaiderIO", {
 
     processResponse: function (data) {
         //Log.log(data);
-        this.data = data;
-        this.show(this.config.animationSpeed, { lockString: this.identifier });
-        this.loaded = true;
-        this.updateDom(this.config.animationSpeed);
+        this.sendSocketNotification("CREATE", data);
     },
 
     httpRequest: function (characterConfig) {
