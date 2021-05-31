@@ -143,7 +143,10 @@ Module.register("MMM-RaiderIO", {
     socketNotificationReceived: function (notification, result) {
         if (notification === "CREATED") {
             this.data = result;
+            this.data.position = true;
+
             this.loaded = true;
+            
             this.show(this.config.animationSpeed, { lockString: this.identifier });
             this.updateDom(this.config.animationSpeed);
         }
