@@ -193,6 +193,7 @@ Module.register("MMM-RaiderIO", {
     processResponse: function (data) {
         //Log.log(data);
         this.data = data;
+        this.data.position = true;
         this.show(this.config.animationSpeed, { lockString: this.identifier });
         this.loaded = true;
         this.updateDom(this.config.animationSpeed);
